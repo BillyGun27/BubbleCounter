@@ -41,7 +41,7 @@ router.post('/register', function(request, response, next) {
     });
 
 });
-
+var out;
 router.post('/login', function(request, response, next) {
     var query = {
         // give the query a unique name
@@ -58,6 +58,7 @@ router.post('/login', function(request, response, next) {
         } else {
             if(res.rowCount){
             //  result = res;//.rows.password;
+            out = res;
             console.log(res.rows);
             console.log(res.rows[0].email);
             console.log(res.rows[0].password);
@@ -113,7 +114,7 @@ router.post('/login', function(request, response, next) {
         //  if(result){
          //   response.redirect('/home')
        //   }else{
-            var obj = {token:result, email:request.body.email , res:res.rows};
+            var obj = {token:result, email:request.body.email , res:out};
             response.send(JSON.stringify(obj));
          // }
         //response.end();
