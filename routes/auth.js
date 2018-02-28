@@ -113,7 +113,7 @@ router.post('/login', function(request, response, next) {
         //  if(result){
          //   response.redirect('/home')
        //   }else{
-            var obj = {token:result};
+            var obj = {token:result, email:request.body.email , res:res.rows};
             response.send(JSON.stringify(obj));
          // }
         //response.end();
