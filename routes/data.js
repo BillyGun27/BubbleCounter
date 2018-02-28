@@ -184,7 +184,8 @@ mv(oldpath, newpath, function(err) {
   // piping the source file to the dest file and then unlinking
   // the source file.
 });
-response.send(newpath);
+//response.send(newpath);
+  response.redirect('/home');
 });
 
 var node_xj = require("xlsx-to-json-lc");
@@ -222,8 +223,8 @@ datmax = request.query.max;//request.body.max;
       data: data
     }).value
 
-    //response.send(output); 
-    response.redirect('/home');
+    response.send(output); 
+  
   });
  
 });
