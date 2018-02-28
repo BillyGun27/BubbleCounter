@@ -222,8 +222,8 @@ datmax = request.query.max;//request.body.max;
       data: data
     }).value
 
-    response.send(output); 
-    
+    //response.send(output); 
+    response.redirect('/home');
   });
  
 });
