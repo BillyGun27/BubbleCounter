@@ -1,6 +1,6 @@
 var conf = {
 	baseURL: window.location.origin +'/App/Controller',
-	baseAPI: 'http://bubblecounter.herokuapp.com',
+	baseAPI: window.location.origin,
 	baseWEB: window.location.origin +'/'
 }
 
