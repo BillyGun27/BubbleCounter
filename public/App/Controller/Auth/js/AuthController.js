@@ -23,9 +23,9 @@ var AuthController = function(){
       data: data
     }, function(){
       alert(service.response().token);
+      console.log(service.response());
       if(service.isSuccessful()){
         if(service.response().token != "email false" && service.response().token != "password false" ){
-          console.log(service.response());
           session.set('token', service.response().token);
           //session.set('is_active', service.response().data.is_active);
           //session.set('status', service.response().data.status);
