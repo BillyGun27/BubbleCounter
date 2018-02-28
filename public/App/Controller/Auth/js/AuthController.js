@@ -22,7 +22,7 @@ var AuthController = function(){
       uri: App.baseAPI() + '/auth/login',
       data: data
     }, function(){
-      //alert(service.response().token);
+      alert(service.response().token);
       if(service.isSuccessful()){
         if(service.response().token != "email false" && service.response().token != "password false" ){
           console.log(service.response().token);
