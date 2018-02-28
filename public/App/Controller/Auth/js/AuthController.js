@@ -19,7 +19,7 @@ var AuthController = function(){
 
     service.start({
       type: 'post',
-      uri: '/auth/login',
+      uri: App.baseAPI() + '/auth/login',
       data: data
     }, function(){
       alert(service.response().token);
