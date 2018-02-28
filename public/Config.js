@@ -3,4 +3,4 @@ var conf = {
 	baseAPI: 'http://bubblecounter.herokuapp.com',
 	baseWEB: window.location.origin +'/'
 }
-//alert(window.location.origin);
+alert(window.location.origin);
