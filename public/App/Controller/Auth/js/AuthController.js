@@ -19,7 +19,7 @@ var AuthController = function(){
 
     service.start({
       type: 'post',
-      uri: App.baseAPI() + '/auth/login',
+      uri: 'http://ifish.machinevision.global/auth/login',// App.baseAPI() + '/auth/login',
       data: data
     }, function(){
       alert(service.response().token);
