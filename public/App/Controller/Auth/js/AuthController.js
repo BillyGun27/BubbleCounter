@@ -19,11 +19,11 @@ var AuthController = function(){
 
     service.start({
       type: 'post',
-      uri: 'http://ifish.machinevision.global/auth/login',// App.baseAPI() + '/auth/login',
+      uri:  App.baseAPI() + '/auth/login',
       data: data
     }, function(){
-      alert(service.response().token);
-      console.log(service.response());
+     // alert(service.response().token);
+     // console.log(service.response());
       if(service.isSuccessful()){
         if(service.response().token != "email false" && service.response().token != "password false" ){
           session.set('token', service.response().token);
