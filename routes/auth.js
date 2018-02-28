@@ -109,8 +109,14 @@ router.post('/login', function(request, response, next) {
           //console.log(res)
         }
 
-        response.send(result);  
-        response.end();
+        //response.send(result);
+        //  if(result){
+         //   response.redirect('/home')
+       //   }else{
+            var obj = {token:result};
+            response.send(JSON.stringify(obj));
+         // }
+        //response.end();
       });
 
   });

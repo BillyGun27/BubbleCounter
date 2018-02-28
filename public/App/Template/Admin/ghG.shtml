@@ -1,0 +1,234 @@
+<div class="wrapper">
+  <header id="header"></header>
+  <aside id="side"></aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Green House G
+        <small>Groof Team</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i></a>Green House</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+        <div class="row">
+          <div class="col-lg-6 col-xs-12">
+            <!-- small box -->
+            <div class="small-box bg-red">
+
+              <div class="small-box-footer">SUMBER DAYA</div>
+              <div class="inner" style="width: 50%; float: left;">
+                <div class="icon" style="right: auto; text-align: center; position: relative;">
+                  <i class="fa fa-spinner" id="imgPower" style="font-size:100px;color: white"></i>
+                </div>
+              </div>
+              <div class="inner" style="width: 50%;display: inline-block; ">
+                <h4>Sumber Daya :</h4>
+                <p><b id="txPower">BATERAI</b></p>
+                <p>PLN <b><i id="btnPower" class="fa fa-toggle-on" style="cursor: pointer;font-size: 20px;"></i></b> Baterai</p>
+              </div>
+              <div class="small-box-footer">Kapasitas <b id="power">Loading..</b> / 400 Ah</div>
+              <div class="icon">
+                <i class="fa fa-bolt" id="charge" style="display: none;"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+              <div class="inner">
+                <h3><b id="temperature"></b> <b style="font-size: 18px">&deg;C</b></h3>
+
+                <p>Suhu</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-thermometer-half"></i>
+              </div>
+              <p class="small-box-footer" id="back">#</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-aqua">
+              <div class="inner">
+                <h3><b id="humidity"></b> <b style="font-size: 18px">RH</b></h3>
+
+                <p>Kelembaban</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-tint"></i>
+              </div>
+              <p class="small-box-footer" id="back">#</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-xs-12">
+            <!-- small box -->
+            <div class="small-box bg-blue">
+              <div class="small-box-footer">TANDON UtAMA</div>
+              <div class="row" style="padding: 25px; padding-right: 50px">
+                <div class="inner" style="width: 50%; float: left;">
+                  Pompa <div class="box-status" id="stPompaUtama"></div>
+                 
+                </div>
+                <div class="inner" style="width: 50%;display: inline-block;">
+                  <div style="text-align: center">Ketinggian Air</div>
+                </div>
+                <div class="row" style="margin-top: 30px">
+                  <div class="inner" style="width: 50%; float: left;">
+                    
+                    <div class="gauge" style="text-align: center">
+                      <canvas id="nutrisiSensor"></canvas>
+                      <p>Status TDS</p>
+                      <div id="preview-nutrisiSensor" style="font-size: 15px;">Loading..</div>
+                      <div id="container-nutrisiSensor" style="text-align: left;"></div>
+                    </div>
+                    
+                  </div>
+                  <div class="inner" style="width: 50%;display: inline-block;">
+                    <div class="gauge" style="text-align: center">
+                      <canvas id="pHSensor"></canvas>
+                      <p>Status pH</p>
+                      <div id="preview-pHSensor" style="font-size: 15px;">Loading..</div>
+                      <div id="container-pHSensor" style="text-align: left;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-waterdrop"></i>
+              </div>
+              <div class="icon" style="top:40px;right: 4px">
+                <div class="progress vertical" style="height: 10px; width: 50px">
+                  <div class="progress-bar progress-bar-info" style="width: 0%;" id="levelUtama"></div>
+                </div>
+              </div>
+              <!--<p class="small-box-footer" id="back">Pompa <b id="stPompaUtama">ON</b> <i id="btnPompaUtama" class="fa fa-toggle-on" style="cursor: pointer;font-size: 20px"></i></p>-->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-blue">
+              <div class="small-box-footer">TANDON DISTRIBUSI</div>
+              <div class="row" style="padding: 25px">
+                <div class="inner">
+                  <div>Ketinggian Air</div>
+                  Pompa <div class="box-status" id="stPompaDistribusi"></div>
+                 
+                </div>
+                
+              </div>
+              <div class="icon">
+                <i class="ion ion-waterdrop"></i>
+              </div>
+              <div class="icon" style="top:40px;right: 4px">
+                <div class="progress vertical" style="height: 10px; width: 50px">
+                  <div class="progress-bar progress-bar-info" style="width: 0%;" id="levelDistribusi"></div>
+                </div>
+              </div>
+              <!--<p class="small-box-footer" id="back">Pompa <b id="stPompaUtama">ON</b> <i id="btnPompaUtama" class="fa fa-toggle-on" style="cursor: pointer;font-size: 20px"></i></p>-->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-xs-6">
+            <!-- small box -->
+            <div class="small-box bg-blue">
+              <div class="small-box-footer">TANDON PENAMPUNG</div>
+              <div class="row" style="padding: 25px">
+                <div class="inner">
+                  <div>Ketinggian Air</div>
+                  Pompa <div class="box-status" id="stPompaPenampung"></div>
+                 
+                </div>
+              </div>
+              <div class="icon">
+                <i class="ion ion-waterdrop"></i>
+              </div>
+              <div class="icon" style="top:40px;right: 4px">
+                <div class="progress vertical" style="height: 10px; width: 50px">
+                  <div class="progress-bar progress-bar-info" style="width: 0%;" id="levelPenampung"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-12 col-xs-12">
+            <!-- /.row -->
+            <div class="row" id="dataTables">
+              <!--<div class="col-xs-12">
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Meja 1</h3>
+                  </div>
+                  <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                      <th>
+                        <th>No</th>
+                        <th>Tanaman</th>
+                        <th>pH</th>
+                        <th>EC (mS/cm)</th>
+                        <th>TDS (ppm)</th>
+                        <th>Status</th>
+                        <th>Tanggal Semai</th>
+                        <th>Prediksi Panen</th>
+                        <th>Realiasi Panen</th>
+                      </th>
+                    </table>
+                  </div>
+                </div>
+              </div>-->
+
+
+            </div>    
+          </div>
+
+        </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+
+  <footer id="footer" class="main-footer"></footer>
+</div>
+<style>
+    .box-status {
+      text-align: center;
+      display:inline-block; 
+      position:relative; 
+      width: 25px;
+      height:20px;
+      border-radius:8px;
+      -moz-border-radius:8px;
+      margin-right: 10px;
+    }
+    .vertical {
+      display: inline-block;
+      width: 20%;
+      height: 40px;
+      -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+      transform: rotate(-90deg);
+      opacity: 0.5;
+    }
+}
+</style>

@@ -1,0 +1,149 @@
+<div class="wrapper">
+  <header id="header"></header>
+  <aside id="side"></aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        iFish Dissolved Oxygen Monitoring
+        <small>Groof Team</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i></a>iFish</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+
+      <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+        
+        <div class="row">
+
+          <div class="col-lg-6">
+            <!-- small box -->
+            <div class="small-box bg-blue">
+              <div class="small-box-footer">Dissolved Oxygen</div>
+              <div class="row" style="padding: 25px">
+                <div class="row">
+                  <div class="inner">
+                    <div class="gauge" style="text-align: center">
+                      <canvas id="DOSensor"></canvas>
+                      <p>Status DO</p>
+                      <div class="col-lg-4 col-lg-push-4 col-xs-4 col-xs-push-4" id="preview-DOSensor" style="font-size: 15px; border: 2px solid black; background-color: gray;">Loading..</div>
+                      <div id="container-DOSensor" style="text-align: left;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="inner" style="text-align: center;margin-top: 20px">
+                  Status Pompa<br>
+                  <div class="col-lg-4 col-lg-push-4 col-xs-4 col-xs-push-4">
+                    <div id="stPompa" style="display: inline-block;width: 50px;height: 50px;background-color: green; border-radius: 50px; border: 6px solid black;font-size: 14px;padding-top: 7px"> loading </div>
+                  </div>
+                </div>
+              </div>
+              <div class="icon">
+                <img src="/App/Public/img/logo.png" style="width: 70%;float: right;margin-top: -10px;margin-right: -20px">
+              </div>
+              <!--<p class="small-box-footer" id="back">Pompa <b id="stPompaUtama">ON</b> <i id="btnPompaUtama" class="fa fa-toggle-on" style="cursor: pointer;font-size: 20px"></i></p>-->
+            </div>
+          </div>
+
+            <div class="col-lg-6">
+              <!-- LINE CHART -->
+              <div class="box box-info">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Grafik</h3>
+                  <!-- Date and time range -->
+                  <div class="form-group" style="float: right;">
+                    <div class="input-group">
+                      <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                        <span>
+                          <i class="fa fa-calendar"></i> Today
+                        </span>
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- /.form group -->
+
+                </div>
+                <div class="box-body">
+                  <div class="chart">
+                    <canvas id="lineChart" width="400" height="280"></canvas>
+                  </div>
+                </div>
+                <!-- /.box-body -->
+              </div>
+              <!-- /.box -->
+
+            </div>
+
+                    
+          <div class="col-lg-12 col-xs-12">
+            <!-- /.row -->
+            <div class="row" id="dataTables" style="height: 500px;overflow-y: auto">
+              <!--<div class="col-xs-12">
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Meja 1</h3>
+                  </div>
+                  <div class="box-body table-responsive no-padding">
+                    <table class="table table-hover">
+                      <th>
+                        <th>No</th>
+                        <th>Tanaman</th>
+                        <th>pH</th>
+                        <th>EC (mS/cm)</th>
+                        <th>TDS (ppm)</th>
+                        <th>Status</th>
+                        <th>Tanggal Semai</th>
+                        <th>Prediksi Panen</th>
+                        <th>Realiasi Panen</th>
+                      </th>
+                    </table>
+                  </div>
+                </div>
+              </div>-->
+
+
+            </div>    
+          </div>
+
+        </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+
+  <footer id="footer" class="main-footer"></footer>
+</div>
+<style>
+    .box-status {
+      text-align: center;
+      display:inline-block; 
+      position:relative; 
+      width: 25px;
+      height:20px;
+      border-radius:8px;
+      -moz-border-radius:8px;
+      margin-right: 10px;
+    }
+    .vertical {
+      display: inline-block;
+      width: 20%;
+      height: 40px;
+      -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+      transform: rotate(-90deg);
+      opacity: 0.5;
+    }
+}
+</style>
