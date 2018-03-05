@@ -18,14 +18,14 @@ const pool = require("./connectpg");
 client.on('connect', function () {
   client.subscribe('machine')
   client.subscribe('sensor')
-  client.publish('sensor', '100')
+ // client.publish('sensor', '100')
  // client.publish('machine','0')
   //client.publish('machine','1')
 })
  
 
 
-var checkmqtt = "F";
+var checkmqtt = "empty";
 client.on('message', function (topic, message) {
   // message is Buffer
  // console.log(message.toString())
