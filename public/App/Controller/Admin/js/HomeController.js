@@ -18,7 +18,7 @@ App.include([
 ], function(){
   	home = new HomeController();
 });
-
+//unedited
 var home;
 var duration = 3000;
 
@@ -580,8 +580,8 @@ var HomeController = function(){
 
 		console.log(point);
 		updateGraphCompare(finalLabel, [
-			point.xls,
-			point.mesin
+			point.mesin,
+			point.xls
 		]);
 	}
 
@@ -668,8 +668,8 @@ var HomeController = function(){
 		}
 
 		updateGraphCompare(finalLabel, [
-			point.xls,
-			point.mesin
+			point.mesin,
+			point.xls
 		]);
 	}
 }
