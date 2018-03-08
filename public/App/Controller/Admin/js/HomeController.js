@@ -33,7 +33,7 @@ var HomeController = function(){
 		Redirect.start('/');
 	}
 
-	
+		  
 	Redirect.startLoading();
 	
 	var body = '/App/Template/Admin/home.shtml';
@@ -152,7 +152,7 @@ var HomeController = function(){
 
 		service.start({
 	      type: 'get', 
-	      uri: App.baseAPI() + '/data/meteran',
+	      uri: App.baseAPI() + '/data/pompa',
 	      timeout: 60000,
 	      loading: false
 	    }, function(){
@@ -355,8 +355,8 @@ var HomeController = function(){
 
 	var excelData;
 	var getExcelData = function(min, max){
-		min = "12/21/17";
-		max = "12/21/17"; 
+		//min = "12/21/17";
+		//max = "12/21/17"; 
 		
 		var data = {
 			min: min,
@@ -382,8 +382,8 @@ var HomeController = function(){
 
 	var mesinData;
 	var getMesinData = function(min, max){
-		min = "02/13/18";
-		max = "02/13/18"; 
+		//min = "02/13/18";
+		//max = "02/13/18"; 
 		
 		var data = {
 			min: min,
